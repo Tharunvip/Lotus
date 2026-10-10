@@ -142,8 +142,8 @@ textarea:focus-visible {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(255, 249, 243, 0.97) 0%, rgba(255, 249, 243, 0.88) 28%, rgba(255, 249, 243, 0.52) 43%, rgba(255, 249, 243, 0.08) 75%, transparent 100%),
-    linear-gradient(180deg, transparent 82%, var(--paper) 100%);
+    linear-gradient(90deg, rgba(255, 249, 243, 0.98) 0%, rgba(255, 249, 243, 0.84) 43%, rgba(255, 249, 243, 0.3) 100%),
+    linear-gradient(180deg, rgba(32, 27, 30, 0) 68%, var(--paper) 100%);
   z-index: 1;
 }
 
@@ -752,7 +752,7 @@ footer a {
   }
 
   .hero::before {
-    background: linear-gradient(180deg, rgba(255, 249, 243, 0.97) 0%, rgba(255, 249, 243, 0.86) 26%, rgba(255, 249, 243, 0.48) 42%, rgba(255, 249, 243, 0.12) 74%, transparent 90%, var(--paper) 100%);
+    background: linear-gradient(180deg, rgba(255, 249, 243, 0.98) 0%, rgba(255, 249, 243, 0.8) 52%, var(--paper) 100%);
   }
 
   .hero-panel {

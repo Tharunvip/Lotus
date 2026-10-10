@@ -19,6 +19,8 @@ const galleryGrid = document.querySelector("#galleryGrid");
 const bookingForm = document.querySelector("#bookingForm");
 const serviceSelect = document.querySelector("#serviceSelect");
 const toast = document.querySelector("#toast");
+const diwaliOffersDialog = document.querySelector("#diwaliOffersDialog");
+const offerBookingLink = document.querySelector("#offerBookingLink");
 
 const ownerWhatsAppNumber = "";
 
@@ -44,6 +46,24 @@ function renderGallery() {
     galleryGrid.appendChild(item);
   });
 }
+
+document.querySelector("#openDiwaliOffers").addEventListener("click", () => {
+  diwaliOffersDialog.showModal();
+});
+
+document.querySelector(".offer-close").addEventListener("click", () => {
+  diwaliOffersDialog.close();
+});
+
+diwaliOffersDialog.addEventListener("click", (event) => {
+  if (event.target === diwaliOffersDialog) {
+    diwaliOffersDialog.close();
+  }
+});
+
+offerBookingLink.addEventListener("click", () => {
+  diwaliOffersDialog.close();
+});
 
 document.querySelectorAll(".package-book").forEach((button) => {
   button.addEventListener("click", () => {

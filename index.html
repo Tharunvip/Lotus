@@ -9,7 +9,7 @@
       content="Lotus Women's Special bridal studio and beauty parlour in Tiruttani. Explore bridal makeup, occasion styling, beauty care, academy training and studio photos."
     >
     <link rel="preload" as="image" href="lotus1.webp">
-    <link rel="stylesheet" href="styles.css?v=5">
+    <link rel="stylesheet" href="styles.css?v=6">
   </head>
   <body>
     <header class="site-header" id="top">
@@ -73,10 +73,92 @@
               <strong>Diwali beauty offers</strong>
               <span>Explore festive makeup, hair styling and beauty care. Contact the studio to ask about current offers and appointment availability.</span>
             </div>
-            <a class="festive-link" href="#booking">Enquire now</a>
+            <button class="festive-link" id="openDiwaliOffers" type="button" aria-haspopup="dialog" aria-controls="diwaliOffersDialog">Enquire now</button>
           </article>
         </div>
       </section>
+
+      <dialog class="offer-dialog" id="diwaliOffersDialog" aria-labelledby="diwaliOffersTitle">
+        <div class="offer-dialog-header">
+          <div>
+            <p class="eyebrow">Festive special</p>
+            <h2 id="diwaliOffersTitle">Diwali beauty offers</h2>
+            <p>Pick a service or combo and ask Lotus about booking.</p>
+          </div>
+          <button class="offer-close" type="button" aria-label="Close Diwali offers">×</button>
+        </div>
+        <div class="offer-dialog-content">
+          <section class="offer-group" aria-labelledby="essentialsTitle">
+            <h3 id="essentialsTitle">Daily beauty essentials</h3>
+            <div class="offer-table-wrap">
+              <table class="offer-table">
+                <thead><tr><th scope="col">Service</th><th scope="col">Regular</th><th scope="col">Diwali offer</th></tr></thead>
+                <tbody>
+                  <tr><td>Eyebrow threading</td><td>₹50</td><td>₹30</td></tr>
+                  <tr><td>Upper lip threading</td><td>₹30</td><td>₹20</td></tr>
+                  <tr><td>Forehead threading</td><td>₹30</td><td>₹20</td></tr>
+                  <tr><td>Full face threading</td><td>₹150</td><td>₹99</td></tr>
+                  <tr><td>Underarm waxing</td><td>₹100</td><td>₹79</td></tr>
+                  <tr><td>Hair trimming</td><td>₹200</td><td>₹149</td></tr>
+                  <tr><td>Basic manicure</td><td>₹250</td><td>₹199</td></tr>
+                  <tr><td>Basic pedicure</td><td>₹350</td><td>₹279</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="offer-group" aria-labelledby="combosTitle">
+            <h3 id="combosTitle">Festive beauty combos</h3>
+            <div class="offer-card-grid">
+              <article class="offer-card"><h4>Glow Mini Combo</h4><p>Eyebrows + upper lip</p><strong>₹49</strong></article>
+              <article class="offer-card"><h4>Diwali Ready Combo</h4><p>Eyebrows + upper lip + forehead</p><strong>₹69</strong></article>
+              <article class="offer-card"><h4>Face Glow Combo</h4><p>Cleanup + eyebrows</p><strong>₹299</strong></article>
+              <article class="offer-card"><h4>Smooth & Glow Combo</h4><p>Full face threading + underarm waxing</p><strong>₹149</strong></article>
+              <article class="offer-card"><h4>Hand & Feet Care</h4><p>Basic manicure + basic pedicure</p><strong>₹399</strong></article>
+              <article class="offer-card"><h4>Hair Refresh Combo</h4><p>Hair wash + hair trim</p><strong>₹249</strong></article>
+            </div>
+          </section>
+
+          <section class="offer-group" aria-labelledby="packagesTitle">
+            <h3 id="packagesTitle">Diwali glow packages</h3>
+            <div class="offer-card-grid">
+              <article class="offer-card"><h4>Mini Glow</h4><p>Basic cleanup + eyebrows</p><strong>₹299</strong></article>
+              <article class="offer-card"><h4>Golden Glow</h4><p>Facial + eyebrows</p><strong>₹599</strong></article>
+              <article class="offer-card"><h4>Festive Queen</h4><p>Facial + eyebrows + upper lip + hair styling</p><strong>₹999</strong></article>
+              <article class="offer-card"><h4>Party Ready</h4><p>Party makeup + hairstyling</p><strong>₹1,499</strong></article>
+              <article class="offer-card"><h4>Complete Beauty Care</h4><p>Facial + manicure + pedicure + eyebrows</p><strong>₹1,299</strong></article>
+            </div>
+          </section>
+
+          <section class="offer-group" aria-labelledby="weekdayTitle">
+            <h3 id="weekdayTitle">Daily specials</h3>
+            <ul class="weekday-offers">
+              <li><strong>Monday</strong><span>Eyebrow threading at ₹30</span></li>
+              <li><strong>Tuesday</strong><span>Upper lip + eyebrows at ₹49</span></li>
+              <li><strong>Wednesday</strong><span>15% off basic facials</span></li>
+              <li><strong>Thursday</strong><span>10% off manicure & pedicure</span></li>
+              <li><strong>Friday</strong><span>15% off hair care services</span></li>
+              <li><strong>Saturday</strong><span>Special festive beauty combos</span></li>
+              <li><strong>Sunday</strong><span>Family & friends beauty offer</span></li>
+            </ul>
+          </section>
+
+          <section class="offer-group" aria-labelledby="bonusTitle">
+            <h3 id="bonusTitle">More ways to celebrate</h3>
+            <div class="offer-card-grid">
+              <article class="offer-card"><h4>Bring a Friend</h4><p>Both customers receive ₹50 off eligible services.</p></article>
+              <article class="offer-card"><h4>Loyal Customer</h4><p>Free eyebrow threading after five eligible visits.</p></article>
+              <article class="offer-card"><h4>Group Booking</h4><p>Ask about special pricing for groups of three or more.</p></article>
+              <article class="offer-card"><h4>First-Time Customer</h4><p>10% off an eligible first visit.</p></article>
+              <article class="offer-card"><h4>Refer & Earn</h4><p>Ask about a discount on your next visit when a referral completes a paid service.</p></article>
+            </div>
+          </section>
+          <p class="offer-disclaimer">Prices and offers shown are suggested Diwali promotions. Please confirm current availability, eligibility and exact service details with the studio before booking.</p>
+        </div>
+        <div class="offer-dialog-footer">
+          <a class="button primary" href="#booking" id="offerBookingLink">Continue to booking enquiry</a>
+        </div>
+      </dialog>
 
       <section class="section packages" id="packages">
         <div class="section-heading">

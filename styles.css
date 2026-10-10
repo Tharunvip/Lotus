@@ -391,14 +391,198 @@ h3 {
   padding: 11px 18px;
   color: var(--ink);
   background: #ffe3a6;
+  border: 0;
   border-radius: 999px;
+  font: inherit;
   font-weight: 800;
+  cursor: pointer;
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .festive-link:hover {
   background: #fff0cb;
   transform: translateY(-2px);
+}
+
+.offer-dialog {
+  width: min(900px, calc(100% - 28px));
+  max-width: 900px;
+  max-height: min(88vh, 900px);
+  padding: 0;
+  overflow: hidden;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid rgba(32, 27, 30, 0.16);
+  border-radius: 20px;
+  box-shadow: 0 28px 90px rgba(32, 27, 30, 0.35);
+}
+
+.offer-dialog::backdrop {
+  background: rgba(25, 16, 21, 0.72);
+  backdrop-filter: blur(4px);
+}
+
+.offer-dialog-header,
+.offer-dialog-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px clamp(18px, 4vw, 36px);
+  background: #fff;
+}
+
+.offer-dialog-header {
+  border-bottom: 1px solid var(--line);
+}
+
+.offer-dialog-header .eyebrow {
+  margin-bottom: 6px;
+}
+
+.offer-dialog-header h2 {
+  margin-bottom: 6px;
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+}
+
+.offer-dialog-header p:last-child {
+  margin: 0;
+  color: var(--muted);
+}
+
+.offer-close {
+  display: grid;
+  flex: 0 0 42px;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  color: var(--ink);
+  background: #f8efeb;
+  border: 0;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.offer-dialog-content {
+  display: grid;
+  gap: 28px;
+  max-height: calc(min(88vh, 900px) - 170px);
+  padding: 24px clamp(18px, 4vw, 36px);
+  overflow-y: auto;
+}
+
+.offer-group h3 {
+  margin-bottom: 14px;
+  color: var(--rose-dark);
+  font-size: 1.45rem;
+}
+
+.offer-table-wrap {
+  overflow-x: auto;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.offer-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.offer-table th,
+.offer-table td {
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.offer-table th {
+  color: var(--rose-dark);
+  background: #f8efeb;
+  font-size: 0.88rem;
+}
+
+.offer-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.offer-table td:last-child {
+  color: var(--rose-dark);
+  font-weight: 900;
+}
+
+.offer-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.offer-card {
+  padding: 16px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.offer-card h4 {
+  margin: 0 0 6px;
+  color: var(--ink);
+  font-size: 1rem;
+}
+
+.offer-card p {
+  margin: 0 0 8px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.offer-card strong {
+  color: var(--rose-dark);
+  font-size: 1.1rem;
+}
+
+.weekday-offers {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.weekday-offers li {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 12px 14px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.weekday-offers strong {
+  color: var(--rose-dark);
+}
+
+.weekday-offers span {
+  color: var(--muted);
+}
+
+.offer-disclaimer {
+  margin: 0;
+  padding: 14px 16px;
+  color: var(--muted);
+  background: #f8efeb;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.offer-dialog-footer {
+  justify-content: flex-end;
+  border-top: 1px solid var(--line);
 }
 
 .section-heading {
@@ -795,6 +979,34 @@ footer a {
     align-items: flex-start;
     flex-direction: column;
     gap: 18px;
+  }
+
+  .offer-dialog {
+    width: calc(100% - 16px);
+    max-height: 94vh;
+    border-radius: 16px;
+  }
+
+  .offer-dialog-content {
+    max-height: calc(94vh - 170px);
+    gap: 22px;
+  }
+
+  .offer-card-grid,
+  .weekday-offers {
+    grid-template-columns: 1fr;
+  }
+
+  .offer-table th,
+  .offer-table td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .offer-dialog-footer .button {
+    width: 100%;
+    padding: 0 12px;
+    text-align: center;
   }
 
   .package-card.featured {

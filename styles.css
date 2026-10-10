@@ -353,8 +353,7 @@ h3 {
 
 .ticker {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .update-pill {
@@ -365,14 +364,41 @@ h3 {
   border-radius: 14px;
 }
 
+.festive-offer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 150px;
+  border-color: rgba(241, 183, 204, 0.36);
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.13), rgba(166, 60, 98, 0.2));
+}
+
 .update-pill strong {
   display: block;
   margin-bottom: 8px;
+  color: #ffe3a6;
+  font-size: 1.15rem;
 }
 
 .update-pill span {
   color: rgba(255, 255, 255, 0.72);
   line-height: 1.5;
+}
+
+.festive-link {
+  flex: 0 0 auto;
+  padding: 11px 18px;
+  color: var(--ink);
+  background: #ffe3a6;
+  border-radius: 999px;
+  font-weight: 800;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.festive-link:hover {
+  background: #fff0cb;
+  transform: translateY(-2px);
 }
 
 .section-heading {
@@ -763,6 +789,12 @@ footer a {
   .package-grid,
   .service-grid {
     grid-template-columns: 1fr;
+  }
+
+  .festive-offer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
   }
 
   .package-card.featured {
